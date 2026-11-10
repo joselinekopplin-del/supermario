@@ -1,0 +1,26 @@
+{
+  "name": "mosslight-adventure",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "playwright test",
+    "test:physics": "tsx --test tests/physics.test.ts tests/routes.test.ts tests/camera-feedback.test.ts tests/native-driver.test.ts",
+    "measure:physics": "tsx scripts/physics-metrics.ts artifacts/upgrade/after/physics-metrics.json",
+    "measure:experience": "node scripts/capture-experience.mjs after",
+    "test:production": "npm run build && node scripts/check-production.mjs"
+  },
+  "dependencies": {
+    "phaser": "3.90.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.2"
+  }
+}

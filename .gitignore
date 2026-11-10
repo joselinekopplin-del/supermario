@@ -1,4 +1,9 @@
-.claude/
-memory/
-SOUL.md
-USER.md
+node_modules/
+dist/
+artifacts/
+test-results/
+playwright-report/
+.DS_Store
+*.log
+.tmp-lock/
+.tmp-lock-clean/
